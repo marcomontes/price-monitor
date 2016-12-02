@@ -1,0 +1,25 @@
+%h1 Listing main_products
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Image url
+      %th Description
+      %th
+      %th
+      %th
+
+  %tbody
+    - @main_products.each do |main_product|
+      %tr
+        %td= main_product.name
+        %td= main_product.image_url
+        %td= main_product.description
+        %td= link_to 'Show', main_product
+        %td= link_to 'Edit', edit_main_product_path(main_product)
+        %td= link_to 'Destroy', main_product, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Main product', new_main_product_path

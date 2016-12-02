@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  store: one
+  main_product: one
+  price_xpath: MyString
+  price_offer_xpath: MyString
+  price_offer_2_xpath: MyString
+
+two:
+  store: two
+  main_product: two
+  price_xpath: MyString
+  price_offer_xpath: MyString
+  price_offer_2_xpath: MyString

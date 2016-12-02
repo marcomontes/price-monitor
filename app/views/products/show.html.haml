@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Store:
+  = @product.store
+%p
+  %b Main product:
+  = @product.main_product
+%p
+  %b Price xpath:
+  = @product.price_xpath
+%p
+  %b Price offer xpath:
+  = @product.price_offer_xpath
+%p
+  %b Price offer 2 xpath:
+  = @product.price_offer_2_xpath
+
+= link_to 'Edit', edit_product_path(@product)
+\|
+= link_to 'Back', products_path

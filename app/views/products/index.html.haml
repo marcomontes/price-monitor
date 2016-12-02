@@ -1,0 +1,29 @@
+%h1 Listing products
+
+%table
+  %thead
+    %tr
+      %th Store
+      %th Main product
+      %th Price xpath
+      %th Price offer xpath
+      %th Price offer 2 xpath
+      %th
+      %th
+      %th
+
+  %tbody
+    - @products.each do |product|
+      %tr
+        %td= product.store
+        %td= product.main_product
+        %td= product.price_xpath
+        %td= product.price_offer_xpath
+        %td= product.price_offer_2_xpath
+        %td= link_to 'Show', product
+        %td= link_to 'Edit', edit_product_path(product)
+        %td= link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Product', new_product_path
